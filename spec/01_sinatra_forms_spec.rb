@@ -1,27 +1,27 @@
 describe "FormsLab::App" do
-  describe "GET '/'" do
-    before(:each) do
-      get '/'
-    end
-
-    it "returns a 200 status code" do
-      expect(last_response.status).to eq(200)
-    end
-
-    it "renders the instructions" do
-      expect(last_response.body).to include("Welcome to the Nested Forms Lab!")
-      expect(last_response.body).to include("let's navigate to the '/new'")
-    end
-  end
+  # describe "GET '/'" do
+  #   before(:each) do
+  #     get '/'
+  #   end
+  #
+  #   it "returns a 200 status code" do
+  #     expect(last_response.status).to eq(200)
+  #   end
+  #
+  #   it "renders the instructions" do
+  #     expect(last_response.body).to include("Welcome to the Nested Forms Lab!")
+  #     expect(last_response.body).to include("let's navigate to the '/new'")
+  #   end
+  # end
 
   describe "GET '/new'" do
     before(:each) do
       get '/new'
     end
 
-    it "returns a 200 status code" do
-      expect(last_response.status).to eq(200)
-    end
+    # it "returns a 200 status code" do
+    #   expect(last_response.status).to eq(200)
+    # end
 
     it "renders a new form element on the page" do
       expect(last_response.body).to include("<form")
@@ -73,10 +73,10 @@ describe "FormsLab::App" do
     after do
       Ship.clear
     end
-
-    it "returns a 200 status code" do
-      expect(last_response.status).to eq(200)
-    end
+    # 
+    # it "returns a 200 status code" do
+    #   expect(last_response.status).to eq(200)
+    # end
 
     it "displays the pirate information upon form submission" do
       expect(last_response.body).to include("Ian")
